@@ -7,10 +7,12 @@
   <spectrum id="1" name="cornell_white" loc="data/spd/cornell_white.spd" />
   <spectrum id="2" name="cornell_red" loc="data/spd/cornell_red.spd" />
   <spectrum id="3" name="cornell_green" loc="data/spd/cornell_green.spd" />
-  <spectrum id="4" name="l1.eta" loc="data/spd/CdS.eta.spd" />
-  <spectrum id="5" name="l1.k" loc="data/spd/CdS.k.spd" />
-  <spectrum id="6" name="l3.eta" loc="data/spd/Glass.eta.spd" />
-  <spectrum id="7" name="l3.k" loc="data/spd/Glass.k.spd" />
+  <spectrum id="4" name="l1.eta" loc="data/spd/dielectric.eta.spd" />
+  <spectrum id="5" name="l1.k" loc="data/spd/dielectric.k.spd" />
+  <spectrum id="6" name="l3.eta" loc="data/spd/Al.eta.spd" />
+  <spectrum id="7" name="l3.k" loc="data/spd/Al.k.spd" />
+  <spectrum id="8" name="l4.eta" loc="data/spd/Glass.eta.spd" />
+  <spectrum id="9" name="l4.k" loc="data/spd/Glass.k.spd" />
 </spectra_lib>
 <materials_lib>
   <material id="0" name="mysimplemat" type="hydra_material">
@@ -38,12 +40,12 @@
   </material>
   <material id="4" name="film" type="thin_film">
     <bsdf type="ggx" />
-    <alpha val="0.5" />
-    <precompute val="1"/>
+    <alpha val="0.0" />
+    <precompute val="0"/>
     <ext_ior val="1.0"/>
     <layers>
       <layer>
-        <thickness val="300" />
+        <thickness val="200" />
         <eta val="1.0">
           <spectrum id="4" type="ref"/>
         </eta>

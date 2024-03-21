@@ -38,16 +38,16 @@
   </material>
   <material id="4" name="film" type="thin_film">
     <bsdf type="ggx" />
-    <alpha val="0.0" />
+    <alpha val="0.001" />
     <precompute val="1"/>
     <layers>
       <layer>
         <thickness val="300" />
         <eta val="1.0">
-          <spectrum id="4" type="ref"/>
+          <spectrum id="6" type="ref"/>
         </eta>
         <k val="1.0">
-          <spectrum id="5" type="ref"/>
+          <spectrum id="7" type="ref"/>
         </k>
       </layer>
       <layer>

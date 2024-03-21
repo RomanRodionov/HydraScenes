@@ -4,10 +4,12 @@
 </textures_lib>
 <spectra_lib>
   <spectrum id="0" name="uniform1" loc="data/spd/uniform1.spd" />
-  <spectrum id="1" name="l1.eta" loc="data/spd/CdS.eta.spd" />
-  <spectrum id="2" name="l1.k" loc="data/spd/CdS.k.spd" />
-  <spectrum id="3" name="l3.eta" loc="data/spd/Glass.eta.spd" />
-  <spectrum id="4" name="l3.k" loc="data/spd/Glass.k.spd" />
+  <spectrum id="1" name="l1.eta" loc="data/spd/SiO2.eta.spd" />
+  <spectrum id="2" name="l1.k" loc="data/spd/SiO2.k.spd" />
+  <spectrum id="3" name="l2.eta" loc="data/spd/Glass.eta.spd" />
+  <spectrum id="4" name="l2.k" loc="data/spd/Glass.k.spd" />
+  <spectrum id="5" name="l3.eta" loc="data/spd/SiO2.eta.spd" />
+  <spectrum id="6" name="l3.k" loc="data/spd/SiO2.k.spd" />
 </spectra_lib>
 <materials_lib>
   <material id="0" name="mysimplemat" type="hydra_material">
@@ -36,7 +38,7 @@
     <precompute val="1"/>
     <layers>
       <layer>
-        <thickness val="300" />
+        <thickness val="30" />
         <eta val="1.0">
           <spectrum id="1" type="ref"/>
         </eta>
@@ -46,10 +48,10 @@
       </layer>
       <layer>
         <eta val="1.0">
-          <spectrum id="3" type="ref"/>
+          <spectrum id="5" type="ref"/>
         </eta>
         <k val="1.0">
-          <spectrum id="4" type="ref"/>
+          <spectrum id="6" type="ref"/>
         </k>
       </layer>
     </layers>
@@ -113,8 +115,8 @@
     <method_secondary>pathtracing</method_secondary>
     <method_tertiary>pathtracing</method_tertiary>
     <method_caustic>pathtracing</method_caustic>
-    <trace_depth>6</trace_depth>
-    <diff_trace_depth>6</diff_trace_depth>
+    <trace_depth>8</trace_depth>
+    <diff_trace_depth>8</diff_trace_depth>
     <maxRaysPerPixel>1024</maxRaysPerPixel>
     <qmc_variant>7</qmc_variant>
   </render_settings>
